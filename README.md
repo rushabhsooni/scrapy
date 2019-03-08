@@ -1,0 +1,118 @@
+# scrapy
+
+
+#some commands for scrapyy shell command
+
+
+
+
+
+[s]   scrapy     scrapy module (contains scrapy.Request, scrapy.Selector, etc)
+[s]   crawler    <scrapy.crawler.Crawler object at 0x000000000539AB38>
+[s]   item       {}
+[s]   request    <GET http://www.laughfactory.com/jokes/family-jokes>
+[s]   response   <200 http://www.laughfactory.com/jokes/family-jokes>
+[s]   settings   <scrapy.settings.Settings object at 0x000000000539A908>
+[s]   spider     <DefaultSpider 'default' at 0x5765320>
+[s] Useful shortcuts:
+[s]   fetch(url[, redirect=True]) Fetch URL and update local objects (by default
+, redirects are followed)
+[s]   fetch(req)                  Fetch a scrapy.Request and update local object
+s
+[s]   shelp()           Shell help (print this help)
+[s]   view(response)    View response in a browser
+In [1]: text = jokes.css("span.joke-publisher::text").get()
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-1-ba441a3de862> in <module>()
+----> 1 text = jokes.css("span.joke-publisher::text").get()
+
+NameError: name 'jokes' is not defined
+
+In [2]: jokes = response.css("div.jokes")[0]
+
+In [3]: text = jokes.css("span.joke-publisher::text").get()
+
+In [4]: text
+Out[4]: u'Anonymous'
+
+In [5]: for jokes in response.css("div.jokes"):
+   ...:     text = jokes.css("span.joke-publisher::text").get()
+   ...:     print(dict(text=text))
+   ...:
+{'text': u'Anonymous'}
+{'text': u'Anonymous'}
+{'text': u'avre1'}
+{'text': u'John Ocall...'}
+{'text': u'sanchie'}
+{'text': u'mtelloibew'}
+{'text': u'lovebite'}
+{'text': u'hatcher'}
+{'text': u'Donald Fre...'}
+{'text': u'Mo '}
+{'text': u'Anonymous'}
+{'text': u'Anonymous'}
+
+In [6]: response.txt
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-6-d6fc08728093> in <module>()
+----> 1 response.txt
+
+AttributeError: 'HtmlResponse' object has no attribute 'txt'
+
+In [7]:
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+
+
+In [12]: response.css('p.text').extract()
+Out[12]: []
+
+In [13]: response.css('p.text').get()
+
+In [14]: text= response.css('p.text').get()
+
+In [15]: print text=text
+  File "<ipython-input-15-64197eab417e>", line 1
+    print text=text
+              ^
+SyntaxError: invalid syntax
+
+
+In [16]: text
+
+In [17]: response.css('joke::text').extract()
+Out[17]: []
+
+In [18]: response.css('joke::text').get()
+
+In [19]: jokes = response.css("div.jokes")[0]
+
+In [20]: text=jokes.css('joke-text::text').get()
+
+In [21]: text
+
+In [22]: text=jokes.css('p::text').get()
+
+In [23]: text
+Out[23]: u'\r\n                        A child asked his father, "How were peopl
+e born?" So his father said, "Adam and Eve made babies, then their babies became
+ adults and made babies, and so on." The child then went to his mother, asked he
+r the same question and she told him, "We were monkeys then we evolved to become
+ like we are now." The child ran back to his father and said, "You lied to me!"
+His father replied, "No, your mom was talking about her side of the family."
+                '
+
+In [24]:
