@@ -1,5 +1,14 @@
 # scrapy
 
+#some-links ----
+
+https://medium.freecodecamp.org/the-tools-and-resources-that-landed-me-a-front-end-developer-job-1314c6f1fa7f
+
+https://medium.freecodecamp.org/better-web-scraping-in-python-with-selenium-beautiful-soup-and-pandas-d6390592e251
+
+
+
+
 
 #some commands for scrapyy shell command
 
