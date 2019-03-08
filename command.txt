@@ -6,6 +6,12 @@ https://medium.freecodecamp.org/the-tools-and-resources-that-landed-me-a-front-e
 
 https://medium.freecodecamp.org/better-web-scraping-in-python-with-selenium-beautiful-soup-and-pandas-d6390592e251
 
+https://medium.freecodecamp.org/how-to-scrape-websites-with-python-and-beautifulsoup-5946935d93fe
+
+https://medium.freecodecamp.org/how-i-built-a-web-crawler-to-automate-my-job-search-f825fb5af718
+
+
+
 
 
 
